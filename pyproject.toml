@@ -27,5 +27,6 @@ build-backend = "poetry.core.masonry.api"
 [dependency-groups]
 dev = [
     "ruff (>=0.13.0,<0.14.0)",
-    "pyrefly (>=0.33.0,<0.34.0)"
+    "pyrefly (>=0.33.0,<0.34.0)",
+    "pre-commit (>=4.3.0,<5.0.0)"
 ]
