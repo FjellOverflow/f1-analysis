@@ -17,3 +17,7 @@ repos:
         args: [--config, "./pyproject.toml"]
       - id: sqlfluff-fix
         args: [--config, "./pyproject.toml"]
+  - repo: https://github.com/srstevenson/nb-clean
+    rev: 4.0.1
+    hooks:
+      - id: nb-clean
