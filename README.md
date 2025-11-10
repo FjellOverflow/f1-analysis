@@ -52,7 +52,14 @@ poetry run jupyter notebook notebooks/01_drivers_vs_teammate.ipynb
 ```sh
 poetry install --with dev
 ```
-2. Install the recommended extensions for _VSCode_, by opening the _Extensions_ tab and typing `@recommended`.
+
+2. Install the *pre-commit* hooks
+
+```sh
+poetry run pre-commit install
+```
+
+3. Install the recommended extensions for _VSCode_, by opening the _Extensions_ tab and typing `@recommended`.
 
 The repository ships with pre‑configured tools to keep the codebase consistent:
 
