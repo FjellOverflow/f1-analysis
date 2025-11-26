@@ -1,7 +1,3 @@
-<p align="center">
-    <img alt="logo" src="./assets/logo.svg" height=128">
-</p>
-
 <h1 align="center">
   F1 Analysis
 </h1>
