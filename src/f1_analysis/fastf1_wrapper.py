@@ -33,7 +33,7 @@ class FastF1Wrapper:
         session.load(laps=True, telemetry=False, weather=False, messages=False)
         laps = session.laps
 
-        laps.to_csv(local_path)
+        laps.to_csv(local_path, index=False)
 
         logger.info(f"Cached session laps at {local_path}")
 
