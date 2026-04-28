@@ -52,14 +52,14 @@ class F1DB:
         return sqlite3.connect(file_uri, uri=True)
 
     def execute_raw_sql_query(self, sql_query: str):
-        connection = self.__connect()
-        cursor = connection.cursor()
+        with self.__connect() as connection:
+            cursor = connection.cursor()
 
-        cursor.execute(sql_query)
-        result = cursor.fetchall()
+            cursor.execute(sql_query)
+            result = cursor.fetchall()
 
-        connection.close()
-        return result
+            connection.close()
+            return result
 
     def execute_sql_query(self, sql_query_name: str):
         sql_query_path = get_project_root() / "sql" / sql_query_name
