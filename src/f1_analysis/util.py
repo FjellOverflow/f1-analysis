@@ -17,7 +17,7 @@ def get_github_latest_release_tag(repo_owner: str, repo_name: str) -> str:
     tag_name = data.get(key)
 
     if not tag_name:
-        raise Exception(f"Response doesn't contain key '{key}'")
+        raise ValueError(f"Response doesn't contain key '{key}'")
 
     return tag_name
 
