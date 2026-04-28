@@ -17,10 +17,10 @@ class FastF1Wrapper:
 
     def __get_session_path(self, session: Session):
         season = session.event["EventDate"].year
-        round = session.event["RoundNumber"]
+        round_number = session.event["RoundNumber"]
         name = session.name.lower().replace(" ", ".")
 
-        filename = f"{season}.{round}.{name}.laps.csv"
+        filename = f"{season}.{round_number}.{name}.laps.csv"
 
         return self.__root_dir / filename
 
