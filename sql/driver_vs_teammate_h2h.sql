@@ -27,6 +27,7 @@ SELECT
             rr1.position_number IS NULL AND rr2.position_number IS NOT NULL
             THEN 'loss'
         WHEN rr1.position_number > rr2.position_number THEN 'loss'
+        ELSE 'unknown'
     END AS result
 FROM race_result AS rr1
 INNER JOIN race_result AS rr2
