@@ -36,6 +36,7 @@ class F1DB:
 
         with zipfile.ZipFile(self.__zip_path, "r") as archive:
             archive.extract("f1db.db", path=self.__root_dir)
+            self.__zip_path.unlink()
 
     def __update(self):
         latest_tag = get_github_latest_release_tag("f1db", "f1db")
