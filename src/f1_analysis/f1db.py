@@ -27,7 +27,8 @@ class F1DB:
 
     def __download_and_extract(self):
         response = requests.get(
-            "https://github.com/f1db/f1db/releases/latest/download/f1db-sqlite.zip"
+            "https://github.com/f1db/f1db/releases/latest/download/f1db-sqlite.zip",
+            timeout=30,
         )
         response.raise_for_status()
 

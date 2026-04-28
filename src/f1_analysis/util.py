@@ -7,7 +7,10 @@ def get_github_latest_release_tag(repo_owner: str, repo_name: str) -> str:
     url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
     key = "tag_name"
 
-    response = requests.get(url)
+    response = requests.get(
+        url,
+        timeout=30,
+    )
     response.raise_for_status()
 
     data = response.json()
