@@ -60,7 +60,6 @@ class F1DB:
             cursor.execute(sql_query)
             result = cursor.fetchall()
 
-            connection.close()
             return result
 
     def execute_sql_query(self, sql_query_name: str):
