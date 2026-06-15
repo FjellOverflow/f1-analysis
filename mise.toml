@@ -1,0 +1,14 @@
+[tools]
+python = "3.13"
+poetry = "2.4"
+
+[tasks.setup]
+run = "poetry install"
+
+[tasks.notebooks]
+depends = ["setup"]
+run = "poetry run jupyter notebook notebooks"
+
+[tasks.check]
+depends = ["setup"]
+run = "poetry run pre-commit run --all-files"
