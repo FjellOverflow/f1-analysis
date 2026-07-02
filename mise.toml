@@ -9,6 +9,6 @@ run = "poetry install"
 depends = ["setup"]
 run = "poetry run jupyter notebook notebooks"
 
-[tasks.check]
+[tasks.ci]
 depends = ["setup"]
 run = "poetry run pre-commit run --all-files"
