@@ -969,18 +969,6 @@ files = [
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
 
 [[package]]
-name = "iniconfig"
-version = "2.1.0"
-description = "brain-dead simple config-ini parsing"
-optional = false
-python-versions = ">=3.8"
-groups = ["dev"]
-files = [
-    {file = "iniconfig-2.1.0-py3-none-any.whl", hash = "sha256:9deba5723312380e77435581c6bf4935c94cbfab9b1ed33ef8d238ea168eb760"},
-    {file = "iniconfig-2.1.0.tar.gz", hash = "sha256:3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"},
-]
-
-[[package]]
 name = "ipykernel"
 version = "6.30.1"
 description = "IPython Kernel for Jupyter"
@@ -2049,7 +2037,7 @@ version = "25.0"
 description = "Core utilities for Python packages"
 optional = false
 python-versions = ">=3.8"
-groups = ["main", "dev"]
+groups = ["main"]
 files = [
     {file = "packaging-25.0-py3-none-any.whl", hash = "sha256:29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484"},
     {file = "packaging-25.0.tar.gz", hash = "sha256:d443872c98d677bf60f6a1f2f8c1cb748e8fe762d2bf9d3148b5599295b0fc4f"},
@@ -2538,28 +2526,6 @@ files = [
     {file = "pyrefly-0.33.0-py3-none-win_arm64.whl", hash = "sha256:b858343993ee10fb8173348ef2ac879ff19d2ef4bbc4190b5c447fa5dd80a94d"},
     {file = "pyrefly-0.33.0.tar.gz", hash = "sha256:30c842ba7a6142c2e5cb8638b829d2b093c966e4b1211fee81ed42fedaa08632"},
 ]
-
-[[package]]
-name = "pytest"
-version = "8.4.2"
-description = "pytest: simple powerful testing with Python"
-optional = false
-python-versions = ">=3.9"
-groups = ["dev"]
-files = [
-    {file = "pytest-8.4.2-py3-none-any.whl", hash = "sha256:872f880de3fc3a5bdc88a11b39c9710c3497a547cfa9320bc3c5e62fbf272e79"},
-    {file = "pytest-8.4.2.tar.gz", hash = "sha256:86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01"},
-]
-
-[package.dependencies]
-colorama = {version = ">=0.4", markers = "sys_platform == \"win32\""}
-iniconfig = ">=1"
-packaging = ">=20"
-pluggy = ">=1.5,<2"
-pygments = ">=2.7.2"
-
-[package.extras]
-dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests", "setuptools", "xmlschema"]
 
 [[package]]
 name = "python-dateutil"
@@ -3485,29 +3451,32 @@ files = [
 
 [[package]]
 name = "sqlfluff"
-version = "3.4.2"
+version = "4.2.2"
 description = "The SQL Linter for Humans"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.10"
 groups = ["dev"]
 files = [
-    {file = "sqlfluff-3.4.2-py3-none-any.whl", hash = "sha256:14109d858da448a4bd0be5a107f4e48de33b1749e6cfc8cc03ec6c045bc9b8ad"},
-    {file = "sqlfluff-3.4.2.tar.gz", hash = "sha256:1777272e4fdac5adef1b89ec25675426e77285d4dc95a055b12bd24181e33f40"},
+    {file = "sqlfluff-4.2.2-py3-none-any.whl", hash = "sha256:62dbfbcd33728351043d216767ec017754a24cd8fb624e8321f61a79988b4fa7"},
+    {file = "sqlfluff-4.2.2.tar.gz", hash = "sha256:0ee2bcd5d704d0bef56bf80b8f0da9b519ab3e9e0bb1d5e6e4b7e3944d3f5606"},
 ]
 
 [package.dependencies]
 chardet = "*"
-click = "<=8.3.0"
+click = "<8.4.0"
 colorama = ">=0.3"
 diff-cover = ">=2.5.0"
 Jinja2 = "*"
 pathspec = "*"
 platformdirs = "*"
-pytest = "*"
 pyyaml = ">=5.1"
 regex = "*"
 tblib = "*"
 tqdm = "*"
+
+[package.extras]
+rs = ["sqlfluffrs (==4.2.2)"]
+testutils = ["pytest"]
 
 [[package]]
 name = "stack-data"
