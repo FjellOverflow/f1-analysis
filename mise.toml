@@ -1,6 +1,6 @@
 [tools]
 python = "3.14.7"
-poetry = "2.4.2"
+poetry = "2.4.3"
 
 [tasks.setup]
 run = "poetry install"
